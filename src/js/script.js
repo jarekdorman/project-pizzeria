@@ -93,7 +93,7 @@
         /* find all active products */
         const activeProducts = document.querySelectorAll(
           select.all.menuProductsActive
-        );
+         );       // or article.active
         console.log(activeProducts);
         /* START LOOP: for each active product */
         for (let activeProduct of activeProducts) {
