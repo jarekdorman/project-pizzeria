@@ -1,7 +1,5 @@
 /* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
-// import { utils } from "stylelint";
-
 {
   ('use strict');
 
@@ -62,6 +60,7 @@
       thisProduct.id = id;
       thisProduct.data = data;
       thisProduct.renderInMenu();
+      thisProduct.initAccordion();
       console.log('new Product:', thisProduct);
     }
     renderInMenu() {
@@ -86,6 +85,7 @@
       console.log(productClickable);
       /* START: click event listener to trigger */
       productClickable.addEventListener('click', function () {
+        console.log('header was clicked');
         /* prevent default action for event */
         event.preventDefault();
         /* toggle active class on element of thisProduct */
@@ -93,7 +93,7 @@
         /* find all active products */
         const activeProducts = document.querySelectorAll(
           select.all.menuProductsActive
-         );       // or article.active
+        ); // or article.active
         console.log(activeProducts);
         /* START LOOP: for each active product */
         for (let activeProduct of activeProducts) {
