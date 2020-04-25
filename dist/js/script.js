@@ -189,7 +189,7 @@
         /* END LOOP: for each paramId in thisProduct.data.params */
       }
       /* set the contents of thisProduct.priceElem to be the value of variable price */
-      thisProduct.priceElem.innerHTML = thisProduct.price;
+      thisProduct.priceElem.textContent = price;
       console.log(price);
     }
   }
