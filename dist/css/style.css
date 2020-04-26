@@ -36,7 +36,7 @@
 
 body {
   margin: 0;
-  background: #f2f2f2;
+  background: #ee3a43;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 1.7;
@@ -403,7 +403,7 @@ input, select {
 .product {
   margin: 6px 0;
   padding: 72px 48px;
-  background: #fff;
+  background: #cfcfc4;
   border-bottom: 1px solid #e6e6e6;
   border-radius: 4px;
 }
