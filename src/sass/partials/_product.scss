@@ -5,8 +5,7 @@
 .product {
   margin: ($base-size / 2) 0;
   padding: ($base-size * 6) ($base-size * 4);
-  // background: $color-light;
-  background: #cfcfc4;
+  background: $color-light;
   border-bottom: 1px solid lighten($color-dark, 70%);
   border-radius: $radius;
 
