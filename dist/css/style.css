@@ -269,10 +269,10 @@ input.error, select.error {
 }
 
 .cart {
-  position: absolute;
+  position: fixed;
   width: 300px;
-  right: 0;
-  top: 12px;
+  right: 100px;
+  top: 65px;
   padding: 12px 18px;
   background: #fff;
   border-radius: 4px;
