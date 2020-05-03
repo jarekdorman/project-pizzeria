@@ -261,8 +261,6 @@
 
       const newValue = parseInt(value);
 
-      // TO DO : ADD VALIDATION
-
       if (newValue != thisWidget.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
         thisWidget.value = newValue;
         thisWidget.announce();
@@ -324,6 +322,8 @@
       });
 
       thisCart.dom.productList.addEventListener('updated', function () { thisCart.update(); });
+
+      thisCart.dom.productList.addEventListener('remove', function () { thisCart.remove(event.detail.cartProduct); });
     }
     add(menuProduct) {
       const thisCart = this;
@@ -350,15 +350,24 @@
         thisCart.totalNumber += product.amount;
       }
       thisCart.totalPrice = thisCart.subtotalPrice + thisCart.deliveryFee;
-      console.log('thsCart.totalNumber', thisCart.totalNumber);
-      console.log('thsCart.subtotalPrice', thisCart.subtotalPrice);
-      console.log('thsCart.totalPrice', thisCart.totalPrice);
+      // console.log('thsCart.totalNumber', thisCart.totalNumber);
+      // console.log('thsCart.subtotalPrice', thisCart.subtotalPrice);
+      // console.log('thsCart.totalPrice', thisCart.totalPrice);
 
       for (let key of thisCart.renderTotalsKeys) {
         for (let elem of thisCart.dom[key]) {
           elem.innerHTML = thisCart[key];
         }
       }
+    }
+
+    remove(cartProduct) {
+      const thisCart = this;
+      const index = thisCart.products.indexOf(cartProduct);
+      thisCart.products.splice(index, 1);
+      cartProduct.dom.wrapper.remove();
+
+      thisCart.update();
     }
   }
 
@@ -375,6 +384,7 @@
 
       thisCartProduct.getElements(element);
       thisCartProduct.initAmountWidget();
+      thisCartProduct.initActions();
     }
 
     getElements(element) {
@@ -399,9 +409,36 @@
         thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
       });
     }
+
+    remove() {
+      const thisCartProduct = this;
+
+      const event = new CustomEvent('remove', {
+        bubbles: true,
+        detail: {
+          cartProduct: thisCartProduct,
+        },
+      });
+
+      thisCartProduct.dom.wrapper.dispatchEvent(event);
+    }
+
+    initActions() {
+      const thisCartProduct = this;
+      thisCartProduct.dom.edit.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
+      thisCartProduct.dom.remove.addEventListener('click', function (event) {
+        event.preventDefault();
+        console.log(thisCartProduct.dom.remove);
+        thisCartProduct.remove();
+      });
+    }
   }
 
-
+  // document.getElementById("myBtn").addEventListener("click", function(){
+  //   document.getElementById("demo").innerHTML = "Hello World";
+  // });
 
   const app = {
     initData: function () {
