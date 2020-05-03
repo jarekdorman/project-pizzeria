@@ -430,7 +430,7 @@
       });
       thisCartProduct.dom.remove.addEventListener('click', function (event) {
         event.preventDefault();
-        console.log(thisCartProduct.dom.remove);
+        // console.log(thisCartProduct.dom.remove);
         thisCartProduct.remove();
       });
     }
