@@ -238,6 +238,8 @@ input.error, select.error {
   background-position: center;
   background-size: cover;
   color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .header__wrapper {
@@ -269,12 +271,12 @@ input.error, select.error {
 }
 
 .cart {
-  position: fixed;
+  position: absolute;
   width: 300px;
-  right: 100px;
-  top: 65px;
+  right: 0;
+  top: 0;
   padding: 12px 18px;
-  background: #fff;
+  background: #f1f1f1;
   border-radius: 4px;
   color: #ff6b6b;
   font-size: 12px;
@@ -464,7 +466,7 @@ input.error, select.error {
 .product {
   margin: 6px 0;
   padding: 72px 48px;
-  background: #fff;
+  background: #f1f1f1;
   border-bottom: 1px solid #e6e6e6;
   border-radius: 4px;
 }
