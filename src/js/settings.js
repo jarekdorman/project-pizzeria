@@ -1,5 +1,4 @@
-/* global Handlebars */
-
+/* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
 export const select = {
   templateOf: {
@@ -78,7 +77,6 @@ export const settings = {
 };
 
 export const templates = {
- 
   menuProduct: Handlebars.compile(
     document.querySelector(select.templateOf.menuProduct).innerHTML
   ),

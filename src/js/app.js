@@ -1,7 +1,6 @@
 import {settings, select} from './settings.js';
 import Product from './components/product.js';
-import Cart  from './components/cart.js';
-
+import Cart from './components/cart.js';
 
 const app = {
   initData: function () {
@@ -58,7 +57,7 @@ const app = {
 
     thisApp.productList = document.querySelector(select.containerOf.menu);
 
-    thisApp.productList.addEventListener('add-to-cart', function(event){
+    thisApp.productList.addEventListener('add-to-cart', function (event){
       app.cart.add(event.detail.product);
     });
   },

@@ -1,9 +1,8 @@
-import {select, classNames, templates} from '../settings.js';
-import {utils} from '../utils.js';
-import {amountWidget} from './amountWidget.js';
+import {select, templates, classNames} from './settings.js';
+import amountWidget from './amountWidget.js';
+import utils from '../utils.js';
 
-
-export class Product {
+class Product {
   constructor(id, data) {
     const thisProduct = this;
     thisProduct.id = id;
@@ -185,7 +184,7 @@ export class Product {
       bubbles: true,
       detail: {
         product: thisProduct,
-      }
+      },
     });
 
     thisProduct.element.dispatchEvent(event);

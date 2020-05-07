@@ -1,9 +1,8 @@
-import {select, classNames, templates, settings } from '../settings.js';
-import {utils} from '../utils.js';
+import {settings, select, classNames, templates} from './settings.js';
+import utils from '../utils.js';
 import CartProduct from './cartProduct.js';
 
-
-export class Cart {
+class Cart {
   constructor(element) {
     const thisCart = this;
 
@@ -118,7 +117,6 @@ export class Cart {
     thisCart.dom.productList.appendChild(generatedDOM);
 
     thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
-    
     thisCart.update();
   }
 
