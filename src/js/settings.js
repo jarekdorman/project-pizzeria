@@ -1,3 +1,6 @@
+/* global Handlebars */
+
+
 export const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
@@ -75,6 +78,7 @@ export const settings = {
 };
 
 export const templates = {
+ 
   menuProduct: Handlebars.compile(
     document.querySelector(select.templateOf.menuProduct).innerHTML
   ),
