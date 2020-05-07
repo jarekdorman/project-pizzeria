@@ -1,4 +1,4 @@
-/* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
+/* global Handlebars */ 
 
 export const select = {
   templateOf: {
@@ -84,3 +84,4 @@ export const templates = {
     document.querySelector(select.templateOf.cartProduct).innerHTML
   ),
 };
+
