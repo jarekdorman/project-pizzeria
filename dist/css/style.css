@@ -726,7 +726,7 @@ input.error, select.error {
 }
 
 .rangeSlider__fill {
-  background: #78e08f;
+  background: #ff6b6b;
   transition-timing-function: cubic-bezier(0, 1, 0, 1);
   transition: width 100ms;
   box-shadow: none;

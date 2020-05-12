@@ -104,6 +104,8 @@ class Cart {
       .then(function (parsedResponse) {
         console.log('parsedResponse', parsedResponse);
       });
+
+    thisCart.reset();
   }
 
   add(menuProduct) {
@@ -149,6 +151,16 @@ class Cart {
     cartProduct.dom.wrapper.remove();
 
     thisCart.update();
+  }
+  reset(){
+    const thisCart = this;
+    thisCart.products = [];
+    while(thisCart.dom.productList.hasChildNodes()) {
+      thisCart.dom.productList.removeChild(thisCart.dom.productList.firstChild);
+      thisCart.update();}
+
+    thisCart.dom.phone.value = '';
+    thisCart.dom.address.value = '';
   }
 }
 
