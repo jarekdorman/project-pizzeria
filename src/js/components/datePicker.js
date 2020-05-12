@@ -37,7 +37,7 @@ export class datePicker extends baseWidget {
       disable: [
         function (date) {
           // return true to disable
-          return date.getDay() === 1 || date.getDay() === 1;
+          return (date.getDay() === 1);
         },
       ],
       onChange: function(selectedDates, dateStr){ 
