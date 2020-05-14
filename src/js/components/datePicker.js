@@ -28,7 +28,7 @@ export class datePicker extends baseWidget {
     );
 
     flatpickr(thisWidget.dom.input, {
-      defaultDate: thisWidget.minDate,
+      defaultDate: thisWidget.value,
       minDate: thisWidget.minDate,
       maxDate: thisWidget.maxDate,
       locale: {
@@ -46,13 +46,15 @@ export class datePicker extends baseWidget {
       
   }
 
-  parseValue(newValue) {
-    return newValue;
+  parseValue(value) {
+    return value;
   }
 
   isValid() {
     return true;
   }
 
-  renderValue() {}
+  renderValue() {
+    
+  }
 }

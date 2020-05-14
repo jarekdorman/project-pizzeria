@@ -55,7 +55,7 @@
 
 body {
   margin: 0;
-  background: #ff6b6b;
+  background: #F07966;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 1.7;
@@ -96,9 +96,9 @@ body {
 }
 
 .btn-secondary {
-  background: #ff6b6b;
+  background: #F07966;
   color: #fff;
-  border-color: #ff6b6b;
+  border-color: #F07966;
   border-radius: 4px;
   transition: all 0.3s;
   display: inline-block;
@@ -111,12 +111,12 @@ body {
 }
 
 .btn-secondary:hover {
-  background: #ff7a7a;
+  background: #f18574;
 }
 
 .btn-secondary.disabled, .btn-secondary[disabled] {
-  background: #b5b5b5;
-  border-color: #b5b5b5;
+  background: #ababab;
+  border-color: #ababab;
   cursor: not-allowed;
 }
 
@@ -153,7 +153,7 @@ body {
 
 .btn-quantity--lt {
   background: #fff;
-  color: #ff6b6b;
+  color: #F07966;
   border-color: #fff;
   border-radius: 4px;
   transition: all 0.3s;
@@ -190,7 +190,7 @@ input, select {
 }
 
 input.error, select.error {
-  border-color: #ff6b6b;
+  border-color: #F07966;
 }
 
 .checkbox {
@@ -303,7 +303,7 @@ input.error, select.error {
 }
 
 .main-nav a {
-  color: #ff6b6b;
+  color: #F07966;
   text-decoration: none;
   margin-right: 24px;
   text-align: center;
@@ -325,7 +325,7 @@ input.error, select.error {
   padding: 12px 18px;
   background: #f1f1f1;
   border-radius: 4px;
-  color: #ff6b6b;
+  color: #F07966;
   font-size: 12px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -356,7 +356,7 @@ input.error, select.error {
 }
 
 .cart__total-number {
-  background: #ff6b6b;
+  background: #F07966;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -471,11 +471,11 @@ input.error, select.error {
 }
 
 .cart__action-buttons a {
-  color: #ff6b6b;
+  color: #F07966;
 }
 
 .cart__action-buttons a:hover {
-  color: #ff7a7a;
+  color: #f18574;
 }
 
 .cart__order-price {
@@ -537,7 +537,7 @@ input.error, select.error {
 
 .product__icon {
   position: absolute;
-  color: #ff6b6b;
+  color: #F07966;
   right: -60px;
   top: 12px;
   font-size: 18px;
@@ -726,7 +726,7 @@ input.error, select.error {
 }
 
 .rangeSlider__fill {
-  background: #ff6b6b;
+  background: #7ED3B2;
   transition-timing-function: cubic-bezier(0, 1, 0, 1);
   transition: width 100ms;
   box-shadow: none;

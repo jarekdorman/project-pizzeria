@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext"
+    rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
   <link rel="stylesheet" href="./vendor/range-slider.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <h1 class="logo__title"><span>Mamma</span>Mia!</h1>
-          <h2 class="logo__subtitle">the best homemade Italian food</h2>
+          <h1 class="logo__title"><span>TUSCANY</span>PIZZERIA</h1>
+          <h2 class="logo__subtitle">love at first slice</h2>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -63,6 +67,69 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div id="home-wrapper">
+        <div class="links">
+          <div class="link-a">
+            <!-- <a href="#order"><img src="./images/pizza-1.jpg" alt=""></a> -->
+            <div class="link-text">
+              <h1>ORDER ONLINE</h1>
+            </div>
+          </div>
+          <div class="link-a">
+            <a href="#booking"><img src="./images/pizza-2.jpg" alt=""></a>
+            <div class="link-text">
+              <h1>BOOK A TABLE</h1>
+            </div>
+          </div>
+        </div>
+        <div class="hours">
+          <div class="hours-text">
+            <h1>OPENING HOURS:</h1>
+            <p>TUE - SUN 12PM - 12AM</p>
+          </div>
+        </div>
+        <div class="reviews">
+          <div class="review-photo">
+            <div class="r-photo">
+              <img src="./images/pizza-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="review-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu/p>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="gallery-cards">
+            <div class="gallery-card">
+              <!-- <img src="/src/images/pizza-3.jpg" alt=""> -->
+              <h1>PHOTO</h1>
+            </div>
+            <div class="gallery-card">
+              <!-- <img src=".images/pizza-4.jpg" alt=""> -->
+              <h1>PHOTO</h1>
+            </div>
+            <div class="gallery-card">
+              <h1>PHOTO</h1>
+            </div>
+            <div class="gallery-card">
+              <h1>PHOTO</h1>
+            </div>
+            <div class="gallery-card">
+              <h1>PHOTO</h1>
+            </div>
+            <div class="gallery-card">
+              <h1>PHOTO</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -248,6 +315,7 @@
   <!-- <script src="js/data.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src='./vendor/range-slider.min.js'></script>
-  <script src="js/app.js" type = "module"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
+
 </html>
