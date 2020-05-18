@@ -1,4 +1,4 @@
-import {settings, select, classNames, templates} from '../settings.js';
+import { settings, select, classNames, templates } from '../settings.js';
 import utils from '../utils.js';
 import CartProduct from './cartProduct.js';
 
@@ -152,7 +152,7 @@ class Cart {
 
     thisCart.update();
   }
-  reset(){
+  reset() {
     const thisCart = this;
     thisCart.products = [];
     thisCart.dom.productList.innerHTML = '';

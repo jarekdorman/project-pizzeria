@@ -356,29 +356,29 @@ input.error, select.error {
   margin: 60px 0;
 }
 
-.item {
+.carousel-item {
   height: 250px;
 }
 
-.item > * {
+.carousel-item > * {
   margin: 0;
   height: 100%;
   display: inline-block;
   padding: 0 10px;
 }
 
-.item .carousel-picture {
+.carousel-item .carousel-picture {
   width: 40%;
 }
 
-.item .carousel-picture img {
+.carousel-item .carousel-picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   vertical-align: text-bottom;
 }
 
-.item .carousel-caption {
+.carousel-item .carousel-caption {
   color: #333;
   width: 50%;
   left: 30px;
@@ -386,28 +386,25 @@ input.error, select.error {
   text-align: left;
 }
 
-.item .carousel-caption > * {
+.carousel-item .carousel-caption > * {
   position: absolute;
 }
 
-.item .carousel-caption h2 {
+.carousel-item .carousel-caption h2 {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 300px;
   top: 20%;
-  transform: translateY(-20%);
 }
 
-.item .carousel-caption p {
+.carousel-item .carousel-caption p {
   font-size: 14px;
-  top: 60%;
-  transform: translateY(-60%);
+  top: 36%;
 }
 
-.item .carousel-caption span {
+.carousel-item .carousel-caption span {
   font-style: italic;
-  top: 90%;
-  transform: translateY(-90%);
+  top: 80%;
 }
 
 .carousel-indicators {
@@ -417,6 +414,7 @@ input.error, select.error {
 .carousel-indicators > li {
   background-color: #84817a;
   padding: 5px;
+  border-radius: 5px;
 }
 
 .carousel-indicators > li.active {
@@ -472,7 +470,7 @@ input.error, select.error {
   height: 100%;
   background: #333;
   opacity: 0;
-  content: '';
+  content: "";
   z-index: 1;
   transition: all 0.4s;
 }
@@ -580,8 +578,8 @@ input.error, select.error {
 .cart {
   position: absolute;
   width: 300px;
-  right: 0;
-  top: 0;
+  right: 350px;
+  top: 70px;
   padding: 12px 18px;
   background: #f1f1f1;
   border-radius: 4px;
