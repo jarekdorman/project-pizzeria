@@ -30,7 +30,7 @@
   }
 }
 
-.h1, .product__name, .product__base-price, .page__title {
+.h1, .nav-box .link-box-details a, .product__name, .product__base-price, .page__title {
   font-family: "Oswald", sans-serif;
   font-size: 26px;
   font-weight: 500;
@@ -249,6 +249,266 @@ input.error, select.error {
 
 .checkbox.checkbox--round .checkbox__checkmark {
   border-radius: 50%;
+}
+
+.page-wrapper {
+  margin: 30px auto;
+  padding: 36px 48px;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.nav-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.nav-box > * {
+  border-radius: 4px;
+  text-align: center;
+  margin: 1%;
+}
+
+.nav-box .link-box {
+  height: 150px;
+  -ms-flex: 0 0 48%;
+      flex: 0 0 48%;
+  position: relative;
+}
+
+.nav-box .link-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.nav-box .link-box-details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.nav-box .link-box-details > * {
+  color: #fff;
+  transition: all 0.3s;
+  transform: translate3d(0, 20px, 0);
+}
+
+.nav-box .link-box-details a {
+  opacity: 1;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  padding: 15px;
+  bottom: 50%;
+  display: inline-block;
+}
+
+.nav-box .link-box-details p {
+  opacity: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  bottom: 0;
+}
+
+.nav-box .link-box-details:hover > * {
+  transform: translate3d(0, 0, 0);
+}
+
+.nav-box .link-box-details:hover > p {
+  opacity: 1;
+}
+
+.nav-box .open-hours {
+  background: #F07966;
+  height: 150px;
+  width: 100%;
+}
+
+.nav-box .open-hours > p {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  line-height: 0.5;
+  color: #fff;
+  margin: 36px 0;
+  font-size: 36px;
+}
+
+.nav-box .open-hours > p:last-of-type {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.carousel {
+  margin: 60px 0;
+}
+
+.item {
+  height: 250px;
+}
+
+.item > * {
+  margin: 0;
+  height: 100%;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.item .carousel-picture {
+  width: 40%;
+}
+
+.item .carousel-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: text-bottom;
+}
+
+.item .carousel-caption {
+  color: #333;
+  width: 50%;
+  left: 30px;
+  position: relative;
+  text-align: left;
+}
+
+.item .carousel-caption > * {
+  position: absolute;
+}
+
+.item .carousel-caption h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300px;
+  top: 20%;
+  transform: translateY(-20%);
+}
+
+.item .carousel-caption p {
+  font-size: 14px;
+  top: 60%;
+  transform: translateY(-60%);
+}
+
+.item .carousel-caption span {
+  font-style: italic;
+  top: 90%;
+  transform: translateY(-90%);
+}
+
+.carousel-indicators {
+  bottom: -40px;
+}
+
+.carousel-indicators > li {
+  background-color: #84817a;
+  padding: 5px;
+}
+
+.carousel-indicators > li.active {
+  background-color: #333;
+}
+
+.carousel-control {
+  display: none;
+}
+
+/* Gallery */
+.gallery {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gallery a {
+  color: #F07966;
+  font-size: 14px;
+  padding-top: 7px;
+}
+
+.gallery-photo {
+  -ms-flex: 0 0 32%;
+      flex: 0 0 32%;
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s;
+  margin: 5px 2px;
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.gallery-photo::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: 0;
+  content: '';
+  z-index: 1;
+  transition: all 0.4s;
+}
+
+.gallery-photo:hover::before {
+  opacity: 0.9;
+}
+
+.gallery-photo:hover .gallery-links {
+  opacity: 1;
+}
+
+.gallery-links {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+}
+
+.gallery-links i {
+  color: #fff;
+  z-index: 1;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 40%;
+  padding: 10px;
+  display: inline-block;
+}
+
+.gallery-links i:hover {
+  color: #e55039;
 }
 
 .header {
