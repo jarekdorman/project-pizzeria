@@ -1,4 +1,4 @@
-import { select, classNames } from './settings.js';
+
 /* global Handlebars, dataSource */
 
 const utils = {}; // eslint-disable-line no-unused-vars
