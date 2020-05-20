@@ -324,6 +324,9 @@ export class Booking {
       select.booking.starters
     );
   }
+
+  
+
   initWidgets() {
     const thisBooking = this;
 
