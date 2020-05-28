@@ -70,7 +70,8 @@ export const select = {
     starters: '[name="starter"]',
   },
   nav: {
-    links: '.main-nav a',
+    links: '.main-nav a, .link-box-details a',   
+  
   },
 };
 
@@ -85,6 +86,7 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    selected: 'selected',
   },
   nav: {
     active: 'active',
